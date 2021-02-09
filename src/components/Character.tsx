@@ -20,7 +20,7 @@ function Character(props: CharacterProps) {
       <p>
         <b>Hobbies:</b> {props.hobbies.join(", ")}
       </p>
-      <p>{props.name} originates from props.origin</p>
+      <p>{props.name} originates from {props.origin}</p>
     </div>
   );
 }
