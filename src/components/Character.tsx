@@ -1,3 +1,5 @@
+import { isPropertySignature } from "typescript";
+
 interface CharacterProps {
   name: string;
   nickname: string;
@@ -6,21 +8,21 @@ interface CharacterProps {
   origin: "Greek Mythology" | "Roman Mythology" | "Marvel Comics" | "DC Comics";
 }
 
-function Character(props: CharacterProps) {
+function Character({name, nickname, location, hobbies, origin}: CharacterProps) {
   return (
     <div className="character-card">
-      <h2>{props.name.toUpperCase()}</h2>
-      <h3>the legendary</h3>
+      <h2>{name.toUpperCase()}</h2>
+      <h3>the legendary {nickname}</h3>
       <p>
-        <i>Good to have you here, {props.name}!</i>
+        <i>Good to have you here, {name}!</i>
       </p>
       <p>
-        <b>Location:</b> {props.location}
+        <b>Location:</b> {location}
       </p>
       <p>
-        <b>Hobbies:</b> {props.hobbies.join(", ")}
+        <b>Hobbies:</b> {hobbies.join(", ")}
       </p>
-      <p>{props.name} originates from {props.origin}</p>
+      <p>{name} originates from {origin}</p>
     </div>
   );
 }
