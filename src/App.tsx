@@ -33,6 +33,26 @@ function App() {
         ]}
         origin="Roman Mythology"
       />
+      <Character
+        name="Captain America"
+        nickname="the self absorbed one"
+        location="USA"
+        hobbies={[
+          "being self-righteous", 
+          "gratuitous semi-nudity"
+        ]}
+        origin="Marvel Comics"
+      />
+      <Character
+        name="Superman"
+        nickname="the one who thinks he's hard"
+        location="Krypton"
+        hobbies={[
+          "having an alter-ego", 
+          "having a nervous breakdown over a rock"
+        ]}
+        origin="DC Comics"
+      />
     </div>
   );
 }
